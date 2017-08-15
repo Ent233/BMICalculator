@@ -30,13 +30,14 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.ImperialB = new System.Windows.Forms.RadioButton();
             this.MetricB = new System.Windows.Forms.RadioButton();
-            this.HeightL = new System.Windows.Forms.Label();
             this.WeightL = new System.Windows.Forms.Label();
+            this.ImperialB = new System.Windows.Forms.RadioButton();
+            this.HeightL = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,15 +76,26 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox3
+            // MetricB
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox3.Enabled = false;
-            this.textBox3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox3.Location = new System.Drawing.Point(2, 74);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(300, 38);
-            this.textBox3.TabIndex = 5;
+            this.MetricB.AutoSize = true;
+            this.MetricB.Location = new System.Drawing.Point(152, 3);
+            this.MetricB.Name = "MetricB";
+            this.MetricB.Size = new System.Drawing.Size(106, 35);
+            this.MetricB.TabIndex = 6;
+            this.MetricB.TabStop = true;
+            this.MetricB.Text = "Metric";
+            this.MetricB.UseVisualStyleBackColor = true;
+            // 
+            // WeightL
+            // 
+            this.WeightL.AutoSize = true;
+            this.WeightL.Location = new System.Drawing.Point(3, 110);
+            this.WeightL.Name = "WeightL";
+            this.WeightL.Size = new System.Drawing.Size(141, 31);
+            this.WeightL.TabIndex = 8;
+            this.WeightL.Text = "My Weight";
+            this.WeightL.Click += new System.EventHandler(this.WeightL_Click);
             // 
             // ImperialB
             // 
@@ -96,17 +108,6 @@
             this.ImperialB.Text = "Imperial";
             this.ImperialB.UseVisualStyleBackColor = true;
             // 
-            // MetricB
-            // 
-            this.MetricB.AutoSize = true;
-            this.MetricB.Location = new System.Drawing.Point(152, 3);
-            this.MetricB.Name = "MetricB";
-            this.MetricB.Size = new System.Drawing.Size(106, 35);
-            this.MetricB.TabIndex = 6;
-            this.MetricB.TabStop = true;
-            this.MetricB.Text = "Metric";
-            this.MetricB.UseVisualStyleBackColor = true;
-            // 
             // HeightL
             // 
             this.HeightL.AutoSize = true;
@@ -117,22 +118,13 @@
             this.HeightL.Text = "My Height";
             this.HeightL.Click += new System.EventHandler(this.label1_Click);
             // 
-            // WeightL
-            // 
-            this.WeightL.AutoSize = true;
-            this.WeightL.Location = new System.Drawing.Point(3, 110);
-            this.WeightL.Name = "WeightL";
-            this.WeightL.Size = new System.Drawing.Size(141, 31);
-            this.WeightL.TabIndex = 8;
-            this.WeightL.Text = "My Weight";
-            this.WeightL.Click += new System.EventHandler(this.WeightL_Click);
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(152, 58);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 38);
             this.textBox1.TabIndex = 9;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -141,18 +133,37 @@
             this.textBox2.Size = new System.Drawing.Size(100, 38);
             this.textBox2.TabIndex = 10;
             // 
-            // Form1
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBox3.Enabled = false;
+            this.textBox3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox3.Location = new System.Drawing.Point(2, 74);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(300, 38);
+            this.textBox3.TabIndex = 5;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(2, 13);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(300, 38);
+            this.textBox4.TabIndex = 6;
+            // 
+            // BMICalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 441);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "BMICalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -174,6 +185,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 
