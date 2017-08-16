@@ -8,6 +8,7 @@ namespace BMICalculator
 {
     static class Program
     {
+        public static BMICalculator bMICalculator;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +17,8 @@ namespace BMICalculator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BMICalculator());
+            bMICalculator = new BMICalculator();
+            Application.Run(new SplashForm());
         }
     }
 }
