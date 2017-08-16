@@ -38,6 +38,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.reset = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +71,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.button1, 2);
             this.button1.Location = new System.Drawing.Point(3, 168);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(288, 46);
+            this.button1.Size = new System.Drawing.Size(292, 46);
             this.button1.TabIndex = 4;
             this.button1.Text = "Calculate BMI";
             this.button1.UseVisualStyleBackColor = true;
@@ -146,17 +147,28 @@
             // 
             // textBox4
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox4.BackColor = System.Drawing.SystemColors.Window;
             this.textBox4.Location = new System.Drawing.Point(2, 13);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(300, 38);
             this.textBox4.TabIndex = 6;
+            // 
+            // reset
+            // 
+            this.reset.Location = new System.Drawing.Point(2, 356);
+            this.reset.Name = "reset";
+            this.reset.Size = new System.Drawing.Size(298, 46);
+            this.reset.TabIndex = 7;
+            this.reset.Text = "Reset";
+            this.reset.UseVisualStyleBackColor = true;
+            this.reset.Click += new System.EventHandler(this.reset_Click);
             // 
             // BMICalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 441);
+            this.Controls.Add(this.reset);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -187,6 +199,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button reset;
     }
 }
 

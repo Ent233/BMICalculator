@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Name: LF
  * Date: August 15, 2017
  * Description: An BMI Calculator with windows form
- * Version: 0.3 change output text backcolor.
+ * Version: 0.4 Add reset function.
 */
 namespace BMICalculator
 {
@@ -103,6 +103,16 @@ namespace BMICalculator
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void reset_Click(object sender, EventArgs e)
+        {
+            ImperialB.Checked = true;
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox4.BackColor = System.Drawing.SystemColors.Window;
         }
     }
 }
