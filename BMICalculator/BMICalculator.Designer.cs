@@ -146,6 +146,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBox4.Location = new System.Drawing.Point(2, 13);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(300, 38);

@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Name: LF
  * Date: August 15, 2017
  * Description: An BMI Calculator with windows form
- * Version: 0.2 finished the calculate function.
+ * Version: 0.3 change output text backcolor.
 */
 namespace BMICalculator
 {
@@ -70,22 +70,26 @@ namespace BMICalculator
             if(bmi<18.5)
             {
                 textBox4.Text = "You are underweight.";
+                textBox4.BackColor = Color.Yellow;
             }
             else
             {
                 if(bmi>=18.5&&bmi<=24.9)
                 {
                     textBox4.Text = "You are normal.";
+                    textBox4.BackColor = Color.Green;
                 }
                 else
                 {
                     if(bmi>24.9&&bmi<=29.9)
                     {
                         textBox4.Text = "You are overweight.";
+                        textBox4.BackColor = Color.SteelBlue;
                     }
                     else
                     {
                         textBox4.Text = "You are obese.";
+                        textBox4.BackColor = Color.Red;
                     }
                 }
             }
